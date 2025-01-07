@@ -1,0 +1,26 @@
+﻿  Input & Validation Library.cpp
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(43,19): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(48,23): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(181,20): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(326,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(360,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(396,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(447,14): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+C:\Users\USER\Desktop\Input & Validation Library\Input & Validation Library\clsString.h(532,24): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'Input%20&%20Validation%20Library.cpp')
+  
+  Input & Validation Library.vcxproj -> C:\Users\USER\Desktop\Input & Validation Library\x64\Debug\Input & Validation Library.exe
