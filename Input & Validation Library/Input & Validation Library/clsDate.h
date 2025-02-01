@@ -130,6 +130,26 @@ public:
 	}
 
 
+	static string Get_SystemDateTimeString() {
+
+		time_t t = time(0);
+		tm* Now = localtime(&t);
+
+		short Day, Month, Year, Hour, Minute, Second;
+
+		Year = Now->tm_year + 1900;
+		Month = Now->tm_mon + 1;
+		Day = Now->tm_mday;
+
+		Hour = Now->tm_hour;
+		Minute = Now->tm_min;
+		Second = Now->tm_sec;
+
+		return (to_string(Day) + "/" + to_string(Month) + "/" + to_string(Year) + " - "
+			+ to_string(Hour) + ":" + to_string(Minute) + ":" + to_string(Second));
+	}
+
+
 	static bool Is_Valid_Date(clsDate Date) {
 
 		if (Date.Day < 1 || Date.Day > 31)
