@@ -5,8 +5,12 @@
 
 class clsInputValidate
 {
+
 public:
 
+	template <typename T> static bool Is_Number_Between(T Number, T From, T To) {
+		return (Number >= From && Number <= To); 
+	}
 
 	static bool Is_Number_Between(short Number, short From, short To) {
 
@@ -42,6 +46,67 @@ public:
 		return true;
 	}
 
+	template <typename T> static T Read_Number(string ErrorMessage = "Invalid Number, Enter again\n") {
+
+		T Number; 
+
+		while (!(cin >> Number)) {
+
+			cin.clear(); 
+			cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+			cout << ErrorMessage; 
+		}
+
+		return Number; 
+	}
+
+
+	template <typename T> static T Read_Number_between(T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n") {
+
+		T Number = Read_Number<T>();  
+		 
+		while (!Is_Number_Between<T>(Number, From, To))  
+		{
+			cout << ErrorMessage;
+			Number = Read_Number<T>();
+		}
+
+		return Number;
+
+	}
+
+
+	static short Read_Short_Number(string ErrorMessage = "Invalid Number, Enter again\n") {
+
+		short Number;
+
+		while (!(cin >> Number)) {
+
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << ErrorMessage;
+		}
+
+		return Number;
+	}
+
+
+
+
+	static short Read_Short_Number_Between(short From, short To, string ErrorMessage = "Number is not within range, Enter again:\n") {
+
+		short Number = Read_Short_Number(); 
+
+		while (!Is_Number_Between(Number, From, To))
+		{
+			cout << ErrorMessage;
+			Number = Read_Short_Number(); 
+		}
+
+		return Number;
+	}
+
+
 
 	static int Read_Int_Number(string ErrorMessage = "Invalid Number, Enter again\n") {
 
@@ -69,6 +134,36 @@ public:
 		} 
 
 		return Number;  
+	}
+
+
+
+	static float Read_Float_Number(string ErrorMessage = "Invalid Number, Enter again\n") {
+
+		float Number;
+
+		while (!(cin >> Number)) {
+
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			cout << ErrorMessage;
+		}
+
+		return Number;
+	}
+
+
+	static float Read_Float_Number_Between(float From, float To, string ErrorMessage = "Number is not within range, Enter again:\n") {
+
+		float Number = Read_Float_Number();
+
+		while (!Is_Number_Between(Number, From, To))
+		{
+			cout << ErrorMessage;
+			Number = Read_Float_Number(); 
+		}
+
+		return Number;
 	}
 
 
@@ -106,5 +201,15 @@ public:
 
 		return Date.Is_Valid_Date();   
 	}
+	
+
+	static string Read_String() {
+
+		string S1 = "";
+		getline(cin >> ws, S1);
+
+		return S1;   
+	}
+
 
 };
